@@ -32,13 +32,11 @@ class _AnimationAppState extends State<AnimationApp> {
             // color: Colors.green,
             width: height,
             height: width,
-            child: Transform(
-                transform: Matrix4.skew(-1, 50),
-                child: Icon(
-                  Icons.favorite,
-                  color: Colors.red,
-                  size: height,
-                ))),
+            child: Icon(
+              Icons.favorite,
+              color: Colors.red,
+              size: height,
+            )),
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
         setState(setDimension);
@@ -53,6 +51,5 @@ class _AnimationAppState extends State<AnimationApp> {
       height = width = 500;
     }
 
-    Future.delayed(const Duration(seconds: 2), () => setState(setDimension));
   }
 }
